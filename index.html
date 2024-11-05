@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Felix Gallery</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item:hover h3 {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .gallery-item h3 {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: #fff;
+            font-size: 1.4rem;
+            margin: 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Felix Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Exhibitions</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <section class="gallery-container">
+        <div class="gallery-item">
+            <img src="1.jpeg" alt="Art 1">
+            <h3>Artwork Title 1</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="2.jpeg" alt="Art 2">
+            <h3>Artwork Title 2</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="3.jpeg" alt="Art 3">
+            <h3>Artwork Title 3</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="4.jpeg" alt="Art 4">
+            <h3>Artwork Title 4</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="5.jpeg" alt="Art 5">
+            <h3>Artwork Title 5</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="6.jpeg" alt="Art 6">
+            <h3>Artwork Title 6</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="7.jpeg" alt="Art 7">
+            <h3>Artwork Title 7</h3>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Felix Gallery. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
